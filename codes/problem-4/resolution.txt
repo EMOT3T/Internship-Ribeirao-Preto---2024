@@ -1,0 +1,24 @@
+- 3 lâmpadas;
+- 3 salas separadas;
+- 3 interruptores;
+- 2 idas as 3 salas com 1 lãmpada em cada;
+- Sem tempo limite;
+- Não sabemos se quando sairmos da sala, os intrruptores se apagarão ou não;
+
+
+# Resolução
+
+Levando em consideração que as salas estão na mesma distância e as lampadas podem ou não ser de LED, resolveria o problema da seguinte forma:
+
+1° Situação ((Lampada LED || Lampada Vidro) && Interruptor Apaga){
+
+    // Acenderia o interruptor a esquerda, esperaria 15 min e iria para a sala do meio, onde as chances são maiores.
+    // Se a lampada estiver apagada e for de Vidro: Verificar se o vidro está quente.
+                                             Led: Verificar se a base está quente.
+    // Se estiver quente, sei que é o interruptor da esquerda, e removo a lâmpada e deixo seu conector virado para a esquerda.
+    //Se não possuir nenuma condição citada acima, vou para outra sala, pois sei que estão relativamente perto uma das outras e sei que ela não vai esfriar tão rádido.
+    
+    //Isso se aplica aos outros 2 interruptores.
+}
+
+// Nota: Se o interruptor não apagar, podemos pular algumas etapas.
